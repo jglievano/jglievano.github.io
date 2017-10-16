@@ -47,7 +47,7 @@ p {
 em,
 li,
 li a {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   font-family: "Noto Sans", sans-serif;
   color: #191E21;
@@ -175,12 +175,12 @@ h4 {
   font-family: "Noto Sans", sans-serif;
   color: #191E21;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 17px;
   margin-bottom: 0.2em;
 }
 
 .side-nav {
-  padding: 0.5em;
+  padding: 0.42em;
 }
 
 .people-image {
@@ -256,10 +256,10 @@ table.bigger-padding tr > td {
 }
 
 .filterstyle {
-  font-size: 17px;
+  font-size: 15px;
   margin-left: -1em;
   margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 .filteroption {
@@ -271,12 +271,12 @@ input[type="radio"] {
   margin-right: 0.5em;
 }
 
-input[type='radio']:after {
-  width: 18px;
-  height: 18px;
+input[type="radio"]:after {
+  width: 16px;
+  height: 16px;
   left: -1px;
   top: -1px;
-  border-radius: 18px;
+  border-radius: 16px;
   position: relative;
   background-color: white;
   content: '';
@@ -285,11 +285,11 @@ input[type='radio']:after {
   border: 2px solid #81848f;
 }
 
-input[type='radio']:checked:after {
+input[type="radio"]:checked:after {
   width: 18px;
   height: 18px;
-  left: -1px;
-  top: -1px;
+  left: -2px;
+  top: -2px;
   border-radius: 18px;
   position: relative;
   background-color: #B1060E;
@@ -586,11 +586,11 @@ fieldset[disabled] .btn-theme {
 /* Nav */
 .header .nav-item {
   position: relative;
-  display: block;
+  border-color: transparent;
+  background-color: transparent;
 }
 
 .header .nav-item-child {
-  top: 2.4em;
   height: 2em;
   padding: 0.5em 20px 0.5em 20px;
   position: relative;
@@ -601,6 +601,12 @@ fieldset[disabled] .btn-theme {
   text-transform: uppercase;
   color: #333;
   height: 100%;
+}
+
+@media screen and (min-width: 991px) {
+  .header .nav-item-child {
+    top: 2.4em;
+  }
 }
 
 .header .nav-item-child.active {
@@ -932,6 +938,15 @@ fieldset[disabled] .btn-theme {
   transition-duration: 200ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+
+swiper {
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-slide {
+  padding-right: 20%;
 }
 
 /*------------------------------------------------------------------

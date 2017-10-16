@@ -65,11 +65,9 @@ var AppRoutingModule = (function () {
     return AppRoutingModule;
 }());
 AppRoutingModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* RouterModule */].forRoot(appRoutes
-            // { enableTracing: true } // <-- for debugging
-            )
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* RouterModule */].forRoot(appRoutes)
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* RouterModule */]
@@ -102,7 +100,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"header\">\n  <nav class=\"navbar\" role=\"navigation\">\n    <div class=\"container\">\n      <div class=\"menu-container\">\n        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".nav-collapse\">\n          <span class=\"sr-only\">Toggle navigation</span>\n          <span class=\"toggle-icon\"></span>\n        </button>\n        <div class=\"navbar-logo\">\n          <a class=\"navbar-logo-wrap\"\n             routerLink=\"home\"\n             routerLinkActive=\"active\">\n            <img src=\"assets/img/SVLLogo.svg\" alt=\"SVL\" style=\"width:60px;\">\n          </a>\n        </div>\n      </div>\n\n      <div class=\"collapse navbar-collapse nav-collapse\">\n        <div class=\"menu-container\">\n          <ul class=\"navbar-nav navbar-nav-right\">\n            <li class=\"nav-item\" *ngFor=\"let section of sections\">\n              <a routerLink=\"/{{section.id}}\"\n                 routerLinkActive=\"active\"\n                 class=\"nav-item-child\">{{section.name}}</a>\n            </li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </nav>\n</header>\n\n<router-outlet></router-outlet>\n\n<footer>\n  <div class=\"content-footer container\">\n    <div class=\"row\">\n      <div class=\"col-xs-6\">\n        <h2>Contact us</h2>\n        <p class=\"margin-b-0\">Admin: Tin Tin Wisniewski\n          <br>Email: tintinyw at cs dot stanford dot edu\n          <br>Phone: (650) 723-3819\n          <br>Fax: (650) 725-1449\n        </p>\n      </div>\n      <div class=\"col-xs-6 text-right\">\n        <h2>-</h2>\n        <p class=\"margin-b-0\">\n          <br>Computer Science Department\n          <br>Stanford University\n          <br>353 Serra Mall, Stanford, CA 94305-9025.\n        </p>\n      </div>\n    </div>\n  </div>\n</footer>\n\n"
+module.exports = "<header class=\"header\">\n  <nav class=\"navbar\" role=\"navigation\">\n    <div class=\"container\">\n      <div class=\"menu-container\">\n        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".nav-collapse\">\n          <span class=\"sr-only\">Toggle navigation</span>\n          <span class=\"toggle-icon\"></span>\n        </button>\n        <div class=\"navbar-logo\">\n          <a class=\"navbar-logo-wrap\"\n             [routerLink]=\"['/home']\"\n             routerLinkActive=\"active\">\n            <img src=\"assets/img/SVLLogo.svg\" alt=\"SVL\" style=\"width:60px;\">\n          </a>\n        </div>\n      </div>\n\n      <div class=\"collapse navbar-collapse nav-collapse\">\n        <div class=\"menu-container\">\n          <ul class=\"navbar-nav navbar-nav-right\">\n            <li class=\"nav-item\" *ngFor=\"let section of sections\">\n              <a routerLink=\"/{{section.id}}\"\n                 routerLinkActive=\"active\"\n                 class=\"nav-item-child\">{{section.name}}</a>\n            </li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </nav>\n</header>\n\n<router-outlet></router-outlet>\n\n<footer>\n  <div class=\"content-footer container\">\n    <div class=\"row\">\n      <div class=\"col-xs-6\">\n        <h2>Contact us</h2>\n        <p class=\"margin-b-0\">Admin: Tin Tin Wisniewski\n          <br>Email: tintinyw at cs dot stanford dot edu\n          <br>Phone: (650) 723-3819\n          <br>Fax: (650) 725-1449\n        </p>\n      </div>\n      <div class=\"col-xs-6 text-right\">\n        <h2>-</h2>\n        <p class=\"margin-b-0\">\n          <br>Computer Science Department\n          <br>Stanford University\n          <br>353 Serra Mall, Stanford, CA 94305-9025.\n        </p>\n      </div>\n    </div>\n  </div>\n</footer>\n\n"
 
 /***/ }),
 
@@ -159,7 +157,7 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 AppComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
@@ -181,17 +179,19 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__publications_publications_filter_pipe__ = __webpack_require__("../../../../../src/app/publications/publications-filter.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__contact_contact_component__ = __webpack_require__("../../../../../src/app/contact/contact.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__people_people_component__ = __webpack_require__("../../../../../src/app/people/people.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__publications_publications_component__ = __webpack_require__("../../../../../src/app/publications/publications.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__research_research_component__ = __webpack_require__("../../../../../src/app/research/research.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__resources_resources_component__ = __webpack_require__("../../../../../src/app/resources/resources.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__teaching_teaching_component__ = __webpack_require__("../../../../../src/app/teaching/teaching.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__not_found_component__ = __webpack_require__("../../../../../src/app/not-found.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_useful_swiper__ = __webpack_require__("../../../../angular2-useful-swiper/lib/swiper.module.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_useful_swiper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_useful_swiper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__publications_publications_filter_pipe__ = __webpack_require__("../../../../../src/app/publications/publications-filter.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__contact_contact_component__ = __webpack_require__("../../../../../src/app/contact/contact.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__people_people_component__ = __webpack_require__("../../../../../src/app/people/people.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__publications_publications_component__ = __webpack_require__("../../../../../src/app/publications/publications.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__research_research_component__ = __webpack_require__("../../../../../src/app/research/research.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__resources_resources_component__ = __webpack_require__("../../../../../src/app/resources/resources.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__teaching_teaching_component__ = __webpack_require__("../../../../../src/app/teaching/teaching.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__not_found_component__ = __webpack_require__("../../../../../src/app/not-found.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -213,33 +213,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
     return AppModule;
 }());
 AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__people_people_component__["a" /* PeopleComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__research_research_component__["a" /* ResearchComponent */],
-            __WEBPACK_IMPORTED_MODULE_4__publications_publications_filter_pipe__["a" /* PublicationsFilterPipe */],
-            __WEBPACK_IMPORTED_MODULE_10__publications_publications_component__["a" /* PublicationsComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__resources_resources_component__["a" /* ResourcesComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__teaching_teaching_component__["a" /* TeachingComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__contact_contact_component__["a" /* ContactComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__not_found_component__["a" /* PageNotFoundComponent */]
+            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__home_home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__people_people_component__["a" /* PeopleComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__research_research_component__["a" /* ResearchComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__publications_publications_filter_pipe__["a" /* PublicationsFilterPipe */],
+            __WEBPACK_IMPORTED_MODULE_11__publications_publications_component__["a" /* PublicationsComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__resources_resources_component__["a" /* ResourcesComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__teaching_teaching_component__["a" /* TeachingComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__contact_contact_component__["a" /* ContactComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__not_found_component__["a" /* PageNotFoundComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_6__app_routing_module__["a" /* AppRoutingModule */]
+            __WEBPACK_IMPORTED_MODULE_4_angular2_useful_swiper__["SwiperModule"],
+            __WEBPACK_IMPORTED_MODULE_7__app_routing_module__["a" /* AppRoutingModule */]
         ],
         providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -273,7 +275,7 @@ var ContactComponent = (function () {
     return ContactComponent;
 }());
 ContactComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         template: __webpack_require__("../../../../../src/app/contact/contact.component.html")
     })
 ], ContactComponent);
@@ -285,7 +287,7 @@ ContactComponent = __decorate([
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"overflow-h\">\n  <div class=\"content-md container\">\n\n    <div class=\"row margin-b-40\">\n      <div class=\"col-sm-9\">\n        <span>WELCOME TO</span>\n        <h2>Stanford Vision and Learning Lab</h2>\n        <p>The Stanford Vision and Learning Lab (SVL) at Stanford is directed by Professors Silvio Savarese, Fei-Fei Li, and Juan Carlos Niebles. We are tackling fundamental open problems in computer vision research and are intrigued by visual functionalities that give rise to semantically meaningful interpretations of the visual world.</p>\n      </div>\n    </div>\n\n    <!-- Team -->\n    <div class=\"row\">\n\n      <div class=\"col-sm-4 sm-margin-b-50\">\n        <div class=\"bg-color-white margin-b-20\">\n          <div class=\"wow zoomIn\" data-wow-duration=\".3\" data-wow-delay=\".1s\">\n            <img class=\"img-responsive\" src=\"assets/img/770x860/01.jpg\" alt=\"Team Image\">\n          </div>\n        </div>\n        <h4><a href=\"http://cvgl.stanford.edu/silvio/\">Silvio Savarese</a></h4>\n        <p>ASSOCIATE PROFESSOR <br>DIRECTOR, <br>SAIL-TOYOTA CENTER FOR AI RESEARCH </p>\n        <a class=\"link\" href=\"http://cvgl.stanford.edu/silvio/\">Read More</a>\n      </div>\n      \n      <div class=\"col-sm-4 sm-margin-b-50\">\n        <div class=\"bg-color-white margin-b-20\">\n          <div class=\"wow zoomIn\" data-wow-duration=\".3\" data-wow-delay=\".1s\">\n            <img class=\"img-responsive\" src=\"assets/img/770x860/02.jpg\" alt=\"Team Image\">\n          </div>\n        </div>\n        <h4><a href=\"http://vision.stanford.edu/feifeili/\">Fei-Fei Li</a><span class=\"text-uppercase margin-l-20\"><br>(publishes under Li Fei-Fei)</span></h4>\n        <p>ASSOCIATE PROFESSOR DIRECTOR, <br>STANFORD AI LAB</p>\n        <a class=\"link\" href=\"http://vision.stanford.edu/feifeili/\">Read More</a>\n      </div>\n\n      \n      <div class=\"col-sm-4 sm-margin-b-50\">\n        <div class=\"bg-color-white margin-b-20\">\n          <div class=\"wow zoomIn\" data-wow-duration=\".3\" data-wow-delay=\".1s\">\n            <img class=\"img-responsive\" src=\"assets/img/770x860/03.jpg\" alt=\"Team Image\">\n          </div>\n        </div>\n        <h4><a href=\"http://www.niebles.net/\">Juan Carlos Niebles</a></h4>\n        <p>SENIOR RESEARCH SCIENTIST, <br>ASSOCIATE DIRECTOR, <br>SAIL-TOYOTA CENTER FOR AI RESEARCH </p>\n        <a class=\"link\" href=\"http://www.niebles.net/\">Read More</a>\n      </div>\n      <!-- End Team -->\n    </div>\n    <!--// end row -->\n  </div>\n</div>\n\n\n<div class=\"bg-color-sky-light\">\n  <div class=\"content-md container\">\n\n    <div class=\"row margin-b-40\">\n      <div class=\"col-sm-9\">\n        <h2>About SVL</h2>\n        <p>Our research addresses the theoretical foundations and practical applications of computational vision. We are focused on discovering and proposing the fundamental principles, algorithms and implementations for solving high-level visual perception and cognition problems involving computational geometry, automated image and video analysis, and visual reasoning. At the same time, our curiosity leads us to study the underlying neural mechanisms that enable the human visual system to perform high level visual tasks with amazing speed and efficiency.</p>\n      </div>\n    </div>\n    <!--// end row -->\n\n    <div class=\"masonry-grid\">\n      <div class=\"masonry-grid-sizer col-xs-6 col-sm-6 col-md-1\"></div>\n      <div class=\"masonry-grid-item col-xs-12 col-sm-6 col-md-8\">\n        <!-- Work -->\n        <div class=\"work\">\n          <div class=\"work-overlay\">\n            <img class=\"full-width img-responsive\" src=\"assets/img/800x400/01.jpg\" alt=\"SVL Group Image\">\n          </div>\n          <div class=\"work-content\">\n            <h3 class=\"color-white margin-b-5\">Our Group</h3>\n            <p class=\"color-white margin-b-0\">Join us today and we would love to meet you</p>\n          </div>\n          <a class=\"content-wrapper-link\" href=\"people.html\"></a>\n        </div>\n      </div>\n\n      <div class=\"masonry-grid-item col-xs-6 col-sm-6 col-md-4\">\n        <div class=\"work\">\n          <div class=\"work-overlay\">\n            <img class=\"full-width img-responsive\" src=\"assets/img/397x400/01.jpg\" alt=\"Portfolio Image\">\n          </div>\n          <div class=\"work-content\">\n            <h3 class=\"color-white margin-b-5\">At CVPR</h3>\n            <p class=\"color-white margin-b-0\">SVL receives V100 award from NVIDIA CEO Jensen Huang at CVPR 2017</p>\n          </div>\n          <a class=\"content-wrapper-link\" href=\"https://blogs.nvidia.com/blog/2017/07/22/tesla-v100-cvpr-nvail/\"></a>\n        </div>\n      </div>\n\n      <div class=\"masonry-grid-item col-xs-6 col-sm-6 col-md-4\">\n        <div class=\"work\">\n          <div class=\"work-overlay\">\n            <img class=\"full-width img-responsive\" src=\"assets/img/397x300/01.jpg\" alt=\"Portfolio Image\">\n          </div>\n          <div class=\"work-content\">\n            <h3 class=\"color-white margin-b-5\">At ICML 2017</h3>\n            <p class=\"color-white margin-b-0\">SVL receives V100 award from NVIDIA CEO Jensen Huang at ICML 2017</p>\n          </div>\n          <a class=\"content-wrapper-link\" href=\"https://blogs.nvidia.com/blog/2017/08/07/ai-researchers-tesla-v100-nvail-isml/\"></a>\n        </div>\n      </div>\n\n      <div class=\"masonry-grid-item col-xs-6 col-sm-6 col-md-4\">\n        <div class=\"work\">\n          <div class=\"work-overlay\">\n            <img class=\"full-width img-responsive\" src=\"assets/img/397x300/02.jpg\" alt=\"Portfolio Image\">\n          </div>\n          <div class=\"work-content\">\n            <h3 class=\"color-white margin-b-5\">At ICCV 2017</h3>\n            <p class=\"color-white margin-b-0\">6 papers accepted at ICCV 2017</p>\n          </div>\n          <a class=\"content-wrapper-link\" href=\"http://iccv2017.thecvf.com/\"></a>\n        </div>\n      </div>\n\n      <div class=\"masonry-grid-item col-xs-6 col-sm-6 col-md-4\">\n        <div class=\"work\">\n          <div class=\"work-overlay\">\n            <img class=\"full-width img-responsive\" src=\"assets/img/397x300/03.jpg\" alt=\"Portfolio Image\">\n          </div>\n          <div class=\"work-content\">\n            <h3 class=\"color-white margin-b-5\">At CVPR 2017</h3>\n            <p class=\"color-white margin-b-0\">13 papers accepted at CVPR 2017</p>\n          </div>\n          <a class=\"content-wrapper-link\" href=\"http://openaccess.thecvf.com/CVPR2017.py\"></a>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- Clients -->\n\n<div class=\"content-md container\">\n  <div class=\"row margin-b-40\">\n    <div class=\"col-md-12 col-xs-12\">\n      <h2>Press Coverage</h2>\n      <div class=\"col-md-6 col-xs-12\">\n        <a href=\"https://techcrunch.com/2017/06/20/tesla-hires-deep-learning-expert-andrej-karpathy-to-lead-autopilot-vision/\"><img src=\"assets/img/clients/01.png\" alt=\"Clients Logo\"></a>\n        <p>SVL Alumnus hired as Vice President of AI at Tesla. “Tesla hires deep learning expert Andrej Karpathy to lead Autopilot vision”</p>\n      </div>\n      <div class=\"col-md-6 col-xs-12\">\n        <a href=\"https://qz.com/1034972/the-data-that-changed-the-direction-of-ai-research-and-possibly-the-world/\"><img src=\"assets/img/clients/02.png\" alt=\"Clients Logo\"></a>\n        <p>Fei-Fei Li of SVL and her work on ImageNet is featured in Quartz. “The data that transformed AI research—and possibly the world”</p>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"bg-color-sky-light\">\n  <div class=\"content-md container\">\n    <div class=\"row margin-b-40\">\n      <div class=\"col-md-6 col-xs-12\">\n        <h2>Join The Lab</h2>\n        <p>We are always looking for outstanding prospective PhD candidates. If you are interested in joining the Stanford Vision and Learning Lab as a PhD candidate, please apply for admission to the department, indicating in your application your interest in the Stanford Vision and Learning Lab, Computer Science Department. If you are interested in a Postdoctoral Researcher position, please contact Prof. Savarese or Prof. Fei-Fei Li.</p>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"overflow-h\">\n  <div class=\"content-md container\">\n\n    <div class=\"row margin-b-40\">\n      <div class=\"col-sm-9\">\n        <span>WELCOME TO</span>\n        <h2>Stanford Vision and Learning Lab</h2>\n        <p>The Stanford Vision and Learning Lab (SVL) at Stanford is directed by Professors Silvio Savarese, Fei-Fei Li, and Juan Carlos Niebles. We are tackling fundamental open problems in computer vision research and are intrigued by visual functionalities that give rise to semantically meaningful interpretations of the visual world.</p>\n      </div>\n    </div>\n\n    <!-- Team -->\n    <div class=\"row\">\n\n      <div class=\"col-sm-4 sm-margin-b-50\">\n        <div class=\"bg-color-white margin-b-20\">\n          <div class=\"wow zoomIn\" data-wow-duration=\".3\" data-wow-delay=\".1s\">\n            <img class=\"img-responsive\" src=\"assets/img/770x860/01.jpg\" alt=\"Team Image\">\n          </div>\n        </div>\n        <h4><a href=\"http://cvgl.stanford.edu/silvio/\">Silvio Savarese</a></h4>\n        <p><br>Associate Professor <br>Director, <br>Sail-Toyota Center For AI Research</p>\n        <a class=\"link\" href=\"http://cvgl.stanford.edu/silvio/\">Read More</a>\n      </div>\n\n      <div class=\"col-sm-4 sm-margin-b-50\">\n        <div class=\"bg-color-white margin-b-20\">\n          <div class=\"wow zoomIn\" data-wow-duration=\".3\" data-wow-delay=\".1s\">\n            <img class=\"img-responsive\" src=\"assets/img/770x860/02.jpg\" alt=\"Team Image\">\n          </div>\n        </div>\n        <h4><a href=\"http://vision.stanford.edu/feifeili/\">Fei-Fei Li</a><span class=\"margin-l-20\"><br>(publishes under Li Fei-Fei)</span></h4>\n        <p>Associate Professor <br>Director, <br>Standford AI Lab</p>\n        <a class=\"link\" href=\"http://vision.stanford.edu/feifeili/\">Read More</a>\n      </div>\n\n      <div class=\"col-sm-4 sm-margin-b-50\">\n        <div class=\"bg-color-white margin-b-20\">\n          <div class=\"wow zoomIn\" data-wow-duration=\".3\" data-wow-delay=\".1s\">\n            <img class=\"img-responsive\" src=\"assets/img/770x860/03.jpg\" alt=\"Team Image\">\n          </div>\n        </div>\n        <h4><a href=\"http://www.niebles.net/\">Juan Carlos Niebles</a></h4>\n        <p><br>Senior Research Scientist, <br>Associate Director, <br>Sail-Toyota Center For AI Research</p>\n        <a class=\"link\" href=\"http://www.niebles.net/\">Read More</a>\n      </div>\n      <!-- End Team -->\n    </div>\n    <!--// end row -->\n  </div>\n</div>\n\n\n<div class=\"bg-color-sky-light\">\n  <div class=\"content-md container\">\n\n    <div class=\"row margin-b-40\">\n      <div class=\"col-sm-9\">\n        <h2>About SVL</h2>\n        <p>Our research addresses the theoretical foundations and practical applications of computational vision. We are focused on discovering and proposing the fundamental principles, algorithms and implementations for solving high-level visual perception and cognition problems involving computational geometry, automated image and video analysis, and visual reasoning. At the same time, our curiosity leads us to study the underlying neural mechanisms that enable the human visual system to perform high level visual tasks with amazing speed and efficiency.</p>\n      </div>\n    </div>\n    <!--// end row -->\n\n    <div class=\"masonry-grid\">\n      <div class=\"masonry-grid-sizer col-xs-6 col-sm-6 col-md-1\"></div>\n      <div class=\"masonry-grid-item col-xs-12 col-sm-6 col-md-8\">\n        <!-- Work -->\n        <div class=\"work\">\n          <div class=\"work-overlay\">\n            <img class=\"full-width img-responsive\" src=\"assets/img/800x400/01.jpg\" alt=\"SVL Group Image\">\n          </div>\n          <div class=\"work-content\">\n            <h3 class=\"color-white margin-b-5\">Our Group</h3>\n            <p class=\"color-white margin-b-0\">Join us today and we would love to meet you</p>\n          </div>\n          <a class=\"content-wrapper-link\" href=\"people.html\"></a>\n        </div>\n      </div>\n\n      <div class=\"masonry-grid-item col-xs-6 col-sm-6 col-md-4\">\n        <div class=\"work\">\n          <div class=\"work-overlay\">\n            <img class=\"full-width img-responsive\" src=\"assets/img/397x400/01.jpg\" alt=\"Portfolio Image\">\n          </div>\n          <div class=\"work-content\">\n            <h3 class=\"color-white margin-b-5\">At CVPR</h3>\n            <p class=\"color-white margin-b-0\">SVL receives V100 award from NVIDIA CEO Jensen Huang at CVPR 2017</p>\n          </div>\n          <a class=\"content-wrapper-link\" href=\"https://blogs.nvidia.com/blog/2017/07/22/tesla-v100-cvpr-nvail/\"></a>\n        </div>\n      </div>\n\n      <div class=\"masonry-grid-item col-xs-6 col-sm-6 col-md-4\">\n        <div class=\"work\">\n          <div class=\"work-overlay\">\n            <img class=\"full-width img-responsive\" src=\"assets/img/397x300/01.jpg\" alt=\"Portfolio Image\">\n          </div>\n          <div class=\"work-content\">\n            <h3 class=\"color-white margin-b-5\">At ICML 2017</h3>\n            <p class=\"color-white margin-b-0\">SVL receives V100 award from NVIDIA CEO Jensen Huang at ICML 2017</p>\n          </div>\n          <a class=\"content-wrapper-link\" href=\"https://blogs.nvidia.com/blog/2017/08/07/ai-researchers-tesla-v100-nvail-isml/\"></a>\n        </div>\n      </div>\n\n      <div class=\"masonry-grid-item col-xs-6 col-sm-6 col-md-4\">\n        <div class=\"work\">\n          <div class=\"work-overlay\">\n            <img class=\"full-width img-responsive\" src=\"assets/img/397x300/02.jpg\" alt=\"Portfolio Image\">\n          </div>\n          <div class=\"work-content\">\n            <h3 class=\"color-white margin-b-5\">At ICCV 2017</h3>\n            <p class=\"color-white margin-b-0\">6 papers accepted at ICCV 2017</p>\n          </div>\n          <a class=\"content-wrapper-link\" href=\"http://iccv2017.thecvf.com/\"></a>\n        </div>\n      </div>\n\n      <div class=\"masonry-grid-item col-xs-6 col-sm-6 col-md-4\">\n        <div class=\"work\">\n          <div class=\"work-overlay\">\n            <img class=\"full-width img-responsive\" src=\"assets/img/397x300/03.jpg\" alt=\"Portfolio Image\">\n          </div>\n          <div class=\"work-content\">\n            <h3 class=\"color-white margin-b-5\">At CVPR 2017</h3>\n            <p class=\"color-white margin-b-0\">13 papers accepted at CVPR 2017</p>\n          </div>\n          <a class=\"content-wrapper-link\" href=\"http://openaccess.thecvf.com/CVPR2017.py\"></a>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- Clients -->\n\n<div class=\"content-md container\">\n  <div class=\"row margin-b-40\">\n    <div class=\"col-md-12 col-xs-12\">\n      <h2>Press Coverage</h2>\n      <div class=\"col-md-6 col-xs-12\">\n        <a href=\"https://techcrunch.com/2017/06/20/tesla-hires-deep-learning-expert-andrej-karpathy-to-lead-autopilot-vision/\"><img src=\"assets/img/clients/01.png\" alt=\"Clients Logo\"></a>\n        <p>SVL Alumnus hired as Vice President of AI at Tesla. “Tesla hires deep learning expert Andrej Karpathy to lead Autopilot vision”</p>\n      </div>\n      <div class=\"col-md-6 col-xs-12\">\n        <a href=\"https://qz.com/1034972/the-data-that-changed-the-direction-of-ai-research-and-possibly-the-world/\"><img src=\"assets/img/clients/02.png\" alt=\"Clients Logo\"></a>\n        <p>Fei-Fei Li of SVL and her work on ImageNet is featured in Quartz. “The data that transformed AI research—and possibly the world”</p>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"bg-color-sky-light\">\n  <div class=\"content-md container\">\n      <h2>Hightlighted Projects</h2>\n    <div class=\"row margin-b-40\">\n        <swiper [config]=\"config\">\n          <div class=\"swiper-wrapper col-md-6 col-xs-12\">\n            <div class=\"swiper-slide\">\n                  <p class=\"name-title article-seprates\">JackRabbot</p>\n                  <p>Our work at the SVL is making practical a new generation of autonomous agents that can operate safely alongside humans in dynamic crowded environments such as terminals, malls, or campuses. The Stanford “Jackrabbot”, which takes it name from the nimble yet shy Jackrabbit, is a self-navigating automated electric delivery cart capable of carrying small payloads.</p>\n                  <p>Check out our <a class=\"link-sytle\" href=\"http://cvgl.stanford.edu/projects/jackrabbot/\">Link</a> and <a class=\"link-sytle\" href=\"http://cvgl.stanford.edu/projects/jackrabbot/cvgl_files/quartz_jr.mp4\">Video</a></p>\n            </div>\n            <div class=\"swiper-slide\">\n                <p class=\"name-title article-seprates\">ActivityNet: A Large-Scale Video Benchmark for Human Activity Understanding</p>\n                <p>Our benchmark aims at covering a wide range of complex human activities that are of interest to people in their daily living. We illustrate three scenarios in which ActivityNet can be used to compare algorithms for human activity understanding: global video classification, trimmed activity classification and activity detection.</p>\n                <p>Check out our <a class=\"link-sytle\" href=\"http://activity-net.org/\">Link</a> and <a class=\"link-sytle\" href=\"http://www.niebles.net/images/anet_cvpr15b.jpg\">Video</a></p>               \n            </div>  \n            <div class=\"swiper-slide\">\n                <p class=\"name-title article-seprates\">AI-Assisted Care</p>\n                <p>The Partnership in AI-Assisted Care (PAC) is an interdisciplinary collaboration between the School of Medicine and the Computer Science department focusing on cutting edge computer vision and machine learning technologies to solve some of healthcare's most important problems.</p>\n                <p>Check out our <a class=\"link-sytle\" href=\"https://aicare.stanford.edu/\">Link</a> and <a class=\"link-sytle\" href=\"https://aicare.stanford.edu/projects/hand_hygiene/video/dispenser.mp4\">Video</a></p>\n            </div>      \n            <div class=\"swiper-slide\">\n                <p class=\"name-title article-seprates\">Visual Genome</p>\n                <p>Short Description: To achieve success at cognitive tasks, models need to understand the interactions and relationships between objects in an image. Visual Genome is a new dataset to connect dense, structured image concepts to language.</p>\n                <p>Check out our <a class=\"link-sytle\" href=\"http://visualgenome.org/\">Link</a> and <a class=\"link-sytle\" href=\"http://visualgenome.org/static/images/front-page/interconnected_images.png\">Image</a></p>\n            </div>    \n          </div>\n        </swiper>\n      <div class=\"col-md-6 col-xs-12\">\n        <h2>Join The Lab</h2>\n        <p>We are always looking for outstanding prospective PhD candidates. If you are interested in joining the Stanford Vision and Learning Lab as a PhD candidate, please apply for admission to the department, indicating in your application your interest in the Stanford Vision and Learning Lab, Computer Science Department. If you are interested in a Postdoctoral Researcher position, please contact Prof. Savarese or Prof. Fei-Fei Li.</p>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -304,11 +306,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var HomeComponent = (function () {
     function HomeComponent() {
+        this.config = {
+            spaceBetween: 30,
+            autoplay: 2500,
+            slidesPerView: 1,
+            speed: 600,
+            loop: true
+        };
     }
     return HomeComponent;
 }());
 HomeComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         template: __webpack_require__("../../../../../src/app/home/home.component.html")
     })
 ], HomeComponent);
@@ -336,7 +345,7 @@ var PageNotFoundComponent = (function () {
     return PageNotFoundComponent;
 }());
 PageNotFoundComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         template: '<h2>Page not found</h2>'
     })
 ], PageNotFoundComponent);
@@ -348,7 +357,7 @@ PageNotFoundComponent = __decorate([
 /***/ "../../../../../src/app/people/people.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"bg-color-sky-light section-separator\">\n  <div class=\"content container\">\n    <div class=\"row\">\n      <div id=\"sidebar\" class=\"sidebar-wrap col-md-3 col-xs-10 sm-margin-b-30\">\n        <div class=\"sidebar\">\n          <ul class=\"list-unstyled sidenav-position\">\n            <li class=\"side-nav\"><a [routerLink]=\"['/people']\"\n                                    fragment=\"faculty\"\n                                    (click)=\"onAnchorClick()\">Faculty</a></li>\n            <li *ngFor=\"let group of people.groups\"\n                class=\"side-nav\">\n              <a [routerLink]=\"['/people']\"\n                 fragment=\"{{groupHref(group)}}\"\n                 (click)=\"onAnchorClick()\">{{group.name}}</a>\n            </li>\n          </ul>\n        </div>\n      </div>\n\n      <div id=\"content\" class=\"content col-md-9 sm-margin-b-30\">\n        <div>\n          <h2 id=\"faculty\">Faculty</h2>\n          <ul class=\"row list-unstyled\">\n            <li class=\"col-md-4 col-xs-4\">\n              <img class=\"people-image\" src=\"assets/img/770x860/01.jpg\">\n              <p><a  class=\"name-title\" href=\"http://cvgl.stanford.edu/silvio/\">Silvio Savarese</a></p>\n              <span class=\"text-uppercase\">ASSOCIATE PROFESSOR \n                <br>DIRECTOR, \n                <br>SAIL-TOYOTA CENTER FOR AI RESEARCH \n                <br>COMPUTER SCIENCE DEPARTMENT\n              </span>\n              <p>Office: Room 154 Gates Bldg</p>\n              <p><i class=\"margin-r-10 color-base icon-call-out\"></i>(650) 725-3860</p>\n              <p><i class=\"margin-r-10 color-base icon-envelope\"></i>ssilvio at stanford dot edu</p>\n            </li>\n\n            <li class=\"col-md-4 col-xs-4\">\n              <img class=\"people-image\" src=\"assets/img/770x860/02.jpg\">\n              <p><a class=\"name-title\" href=\"http://vision.stanford.edu/feifeili/\">Fei-Fei Li</a></p>\n              <span>(publishes under Li Fei-Fei)</span>\n              <br>\n              <span class=\"text-uppercase\">ASSOCIATE PROFESSOR \n                <br>DIRECTOR, STANFORD AI LAB\n                <br>COMPUTER SCIENCE DEPARTMENT\n              </span>\n              <p>Office: Room 246 Gates Bldg</p>\n              <p><i class=\"margin-r-10 color-base icon-call-out\"></i>(650) 725-3860</p>\n              <p><i class=\"margin-r-10 color-base icon-envelope\"></i>feifeili at cs dot stanford dot edu</p>\n            </li>\n\n            <li class=\"col-md-4 col-xs-4\">\n              <img class=\"people-image\" src=\"assets/img/770x860/03.jpg\">\n              <p><a  class=\"name-title\" href=\"http://www.niebles.net/\">Juan Carlos Niebles</a></p>\n              <span class=\"text-uppercase\">SENIOR RESEARCH SCIENTIST\n                <br>ASSOCIATE DIRECTOR, \n                <br>SAIL-TOYOTA CENTER FOR AI RESEARCH \n                <br>COMPUTER SCIENCE DEPARTMENT\n              </span>\n              <p>Office:Room 243 Gates Bldg</p>\n              <p><i class=\"margin-r-10 color-base icon-call-out\"></i>(650) 725-3860</p>\n              <p><i class=\"margin-r-10 color-base icon-envelope\"></i>jniebles at cs dot stanford dot edu</p>\n            </li>\n          </ul>\n        </div>\n\n        <div *ngFor=\"let group of people.groups\">\n          <h2 id=\"{{groupHref(group)}}\" class=\"jumptarget top-seprates\">{{group.name}}</h2>\n          <div class=\"row list-unstyled\">\n            <div *ngFor=\"let member of group.members\"\n                 class=\"col-md-4 col-xs-4 people-profile-card{{member.img ? '-w-img' : ''}}\">\n              <img *ngIf=\"member.img\" class=\"people-profile-image\" src=\"{{member.img}}\">\n              <p class=\"name-title\">{{member.name}}</p>\n              <span *ngIf=\"member.desc\" class=\"text-uppercase small-padding-top\">{{member.desc}}</span>\n              <span *ngIf=\"member.job\" class=\"text-uppercase small-padding-top\">{{member.job}}</span>\n              <br *ngIf=\"member.email\"><span *ngIf=\"member.email\">{{member.email}}</span>\n              <p *ngIf=\"member.web\"><a class=\"link-sytle\" href=\"{{member.web}}\">Website</a></p>\n          </div>\n        </div>\n      </div>\n      \n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"bg-color-sky-light section-separator\">\n  <div class=\"content container\">\n    <div class=\"row\">\n      <div id=\"sidebar\" class=\"sidebar-wrap col-md-3 col-xs-10 sm-margin-b-30\">\n        <div class=\"sidebar\">\n          <ul class=\"list-unstyled sidenav-position\">\n            <li class=\"side-nav\"><a [routerLink]=\"['/people']\"\n                                    fragment=\"faculty\"\n                                    (click)=\"onAnchorClick()\">Faculty</a></li>\n            <li *ngFor=\"let group of people.groups\"\n                class=\"side-nav\">\n              <a [routerLink]=\"['/people']\"\n                 fragment=\"{{groupHref(group)}}\"\n                 (click)=\"onAnchorClick()\">{{group.name}}</a>\n            </li>\n          </ul>\n        </div>\n      </div>\n\n      <div id=\"content\" class=\"content col-md-9 sm-margin-b-30\">\n        <div>\n          <h2 id=\"faculty\">Faculty</h2>\n          <ul class=\"row list-unstyled\">\n            <li class=\"col-md-4 col-xs-4\">\n              <img class=\"people-image\" src=\"assets/img/770x860/01.jpg\">\n              <p><a  class=\"name-title\" href=\"http://cvgl.stanford.edu/silvio/\">Silvio Savarese</a></p>\n              <p>Associate Professor \n                <br>Director, \n                <br>Sail-Toyota Center For AI Research \n\n              </p>\n              <p>Coputer Science Department\n                <br>Office: Room 154 Gates Bldg</p>\n              <p><i class=\"margin-r-10 color-base icon-call-out\"></i>(650) 725-3860</p>\n              <p><i class=\"margin-r-10 color-base icon-envelope\"></i>ssilvio at stanford dot edu</p>\n            </li>\n\n            <li class=\"col-md-4 col-xs-4\">\n              <img class=\"people-image\" src=\"assets/img/770x860/02.jpg\">\n              <p><a class=\"name-title\" href=\"http://vision.stanford.edu/feifeili/\">Fei-Fei Li</a></p>\n              <span>(publishes under Li Fei-Fei)</span>\n              <br>\n              <p>Associate Professor \n                <br>Director, Standford AI Lab\n              </p>\n              <p>Coputer Science Department\n                <br>Office: Room 246 Gates Bldg</p>\n              <p><i class=\"margin-r-10 color-base icon-call-out\"></i>(650) 725-3860</p>\n              <p><i class=\"margin-r-10 color-base icon-envelope\"></i>feifeili at cs dot stanford dot edu</p>\n            </li>\n\n            <li class=\"col-md-4 col-xs-4\">\n              <img class=\"people-image\" src=\"assets/img/770x860/03.jpg\">\n              <p><a  class=\"name-title\" href=\"http://www.niebles.net/\">Juan Carlos Niebles</a></p>\n              <P>Senior Research Scientist\n                <br>Associate Director, \n                <br>Sail-Toyota Center For AI Research</P>\n              <p>Coputer Science Department\n                <br>Office:Room 243 Gates Bldg\n              </p>\n              <p><i class=\"margin-r-10 color-base icon-call-out\"></i>(650) 725-3860</p>\n              <p><i class=\"margin-r-10 color-base icon-envelope\"></i>jniebles at cs dot stanford dot edu</p>\n            </li>\n          </ul>\n        </div>\n\n        <div *ngFor=\"let group of people.groups\">\n          <h2 id=\"{{groupHref(group)}}\" class=\"jumptarget top-seprates\">{{group.name}}</h2>\n          <div class=\"row list-unstyled\">\n            <div *ngFor=\"let member of group.members\"\n                 class=\"col-md-4 col-xs-4 people-profile-card{{member.img ? '-w-img' : ''}}\">\n              <img *ngIf=\"member.img\" class=\"people-profile-image\" src=\"{{member.img}}\">\n              <p class=\"name-title\">{{member.name}}</p>\n              <span *ngIf=\"member.desc\" class=\"text-uppercase small-padding-top\">{{member.desc}}</span>\n              <span *ngIf=\"member.job\" class=\"text-uppercase small-padding-top\">{{member.job}}</span>\n              <br *ngIf=\"member.email\"><span *ngIf=\"member.email\">{{member.email}}</span>\n              <p *ngIf=\"member.web\"><a class=\"link-sytle\" href=\"{{member.web}}\">Website</a></p>\n          </div>\n        </div>\n      </div>\n      \n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -400,7 +409,7 @@ var PeopleComponent = (function () {
     return PeopleComponent;
 }());
 PeopleComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         template: __webpack_require__("../../../../../src/app/people/people.component.html"),
         providers: [__WEBPACK_IMPORTED_MODULE_2__people_service__["a" /* PeopleService */]]
     }),
@@ -1319,7 +1328,7 @@ var PeopleService = (function () {
     return PeopleService;
 }());
 PeopleService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])()
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
 ], PeopleService);
 
 //# sourceMappingURL=people.service.js.map
@@ -1361,7 +1370,7 @@ var PublicationsFilterPipe = (function () {
     return PublicationsFilterPipe;
 }());
 PublicationsFilterPipe = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Pipe */])({ name: 'publicationsFilter' })
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({ name: 'publicationsFilter' })
 ], PublicationsFilterPipe);
 
 //# sourceMappingURL=publications-filter.pipe.js.map
@@ -1371,7 +1380,7 @@ PublicationsFilterPipe = __decorate([
 /***/ "../../../../../src/app/publications/publications.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"bg-color-sky-light section-seperator\">\n  <div class=\"content container\">\n    <div class=\"row\">\n      <div id=\"sidebar\" class=\"sidebar-wrap col-md-3 col-xs-10 sm-margin-b-30\">\n        <ul class=\"sidebar list-unstyled sidenav-position\">\n          <li *ngFor=\"let section of sections\" class=\"side-nav\">\n            <a [routerLink]=\"['/publications']\"\n               fragment=\"{{sectionHref(section)}}\"\n               (click)=\"onAnchorClick()\">{{section.name}}</a>\n          </li>\n        </ul>\n      </div>\n\n      <div id=\"content\" class=\"content col-md-9 col-xs-12 sm-margin-b-30\">\n        <form class=\"filterstyle\">\n          <div class=\"filteroption\"><input [(ngModel)]=\"author\"\n                 type=\"radio\"\n                 name=\"author\"\n                 value=\"All\">All</div>\n          <div class=\"filteroption\"><input [(ngModel)]=\"author\"\n                 type=\"radio\"\n                 name=\"author\"\n                 value=\"Fei-Fei Li\">Fei-Fei Li</div> \n          <div class=\"filteroption\"><input [(ngModel)]=\"author\"\n                 type=\"radio\"\n                 name=\"author\"\n                 value=\"Juan Carlos Niebles\">Juan Carlos Niebles</div> \n          <div class=\"filteroption\"><input [(ngModel)]=\"author\"\n                 type=\"radio\"\n                 name=\"author\"\n                 value=\"Silvio Savarese\">Silvio Savarese</div> \n        </form>\n\n        <ul class=\"row list-unstyled\">\n          <li *ngFor=\"let section of sections\">\n            <h2 id=\"{{sectionHref(section)}}\">{{section.name}}</h2>\n            <ul class=\"list-unstyled\">\n              <li *ngFor=\"let publication of section.publications | publicationsFilter:author\"\n                  class=\"publication-list\">\n                <div class=\"row top-seprates\">\n                  <div class=\"col-md-3 col-xs-3\">\n                    <img *ngIf=\"publication.image != ''\"\n                         class=\"img-responsive article-seprates\"\n                         src=\"/assets/img/pub/{{publication.image}}\">\n                  </div>\n                  <div class=\"col-md-9 col-xs-9\">\n                    <p><b>{{publication.title}}</b></p>\n                    <p *ngIf=\"publication.info != ''\"><em>{{publication.info}}</em></p>\n                    <p>{{publication.authorsText}}</p>\n                    <div [innerHtml]=\"publicationHtml(publication)\"></div>\n                  </div>\n                </div>\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"bg-color-sky-light section-seperator\">\n  <div class=\"content container\">\n    <div class=\"row\">\n      <div id=\"sidebar\" class=\"sidebar-wrap col-md-3 col-xs-10 sm-margin-b-30\">\n        <ul class=\"sidebar list-unstyled sidenav-position\">\n          <li *ngFor=\"let section of sections\" class=\"side-nav\">\n            <a [routerLink]=\"['/publications']\"\n               fragment=\"{{sectionHref(section)}}\"\n               (click)=\"onAnchorClick()\">{{section.name}}</a>\n          </li>\n          <li class=\"side-nav\">\n            <a (click)=\"onBackToTop()\">Back To Top</a></li>\n        </ul>\n      </div>\n\n      <div id=\"content\" class=\"content col-md-9 col-xs-12 sm-margin-b-30\">\n        <form class=\"filterstyle\">\n          <div class=\"filteroption\"><input [(ngModel)]=\"author\"\n                 type=\"radio\"\n                 name=\"author\"\n                 value=\"All\">All</div>\n          <div class=\"filteroption\"><input [(ngModel)]=\"author\"\n                 type=\"radio\"\n                 name=\"author\"\n                 value=\"Fei-Fei Li\">Fei-Fei Li</div> \n          <div class=\"filteroption\"><input [(ngModel)]=\"author\"\n                 type=\"radio\"\n                 name=\"author\"\n                 value=\"Juan Carlos Niebles\">Juan Carlos Niebles</div> \n          <div class=\"filteroption\"><input [(ngModel)]=\"author\"\n                 type=\"radio\"\n                 name=\"author\"\n                 value=\"Silvio Savarese\">Silvio Savarese</div> \n        </form>\n\n        <ul class=\"row list-unstyled\">\n          <li *ngFor=\"let section of sections\">\n            <h2 id=\"{{sectionHref(section)}}\">{{section.name}}</h2>\n            <ul class=\"list-unstyled\">\n              <li *ngFor=\"let publication of section.publications | publicationsFilter:author\"\n                  class=\"publication-list\">\n                <div class=\"row top-seprates\">\n                  <div class=\"col-md-3 col-xs-3\">\n                    <img *ngIf=\"publication.image != ''\"\n                         class=\"img-responsive article-seprates\"\n                         src=\"/assets/img/pub/{{publication.image}}\">\n                  </div>\n                  <div class=\"col-md-9 col-xs-9\">\n                    <p><b>{{publication.title}}</b></p>\n                    <p *ngIf=\"publication.info != ''\"><em>{{publication.info}}</em></p>\n                    <p>{{publication.authorsText}}</p>\n                    <div [innerHtml]=\"publicationHtml(publication)\"></div>\n                  </div>\n                </div>\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -1413,6 +1422,9 @@ var PublicationsComponent = (function () {
             }
         });
     };
+    PublicationsComponent.prototype.onBackToTop = function () {
+        window.scrollTo(0, 0);
+    };
     PublicationsComponent.prototype.getSections = function () {
         var _this = this;
         this.publicationsService.getSections().then(function (sections) { return _this.sections = sections; });
@@ -1434,7 +1446,7 @@ var PublicationsComponent = (function () {
     return PublicationsComponent;
 }());
 PublicationsComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         template: __webpack_require__("../../../../../src/app/publications/publications.component.html"),
         providers: [__WEBPACK_IMPORTED_MODULE_3__publications_service__["a" /* PublicationsService */]]
     }),
@@ -5782,7 +5794,7 @@ var PublicationsService = (function () {
     return PublicationsService;
 }());
 PublicationsService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])()
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
 ], PublicationsService);
 
 //# sourceMappingURL=publications.service.js.map
@@ -5868,7 +5880,7 @@ var ResearchComponent = (function () {
     return ResearchComponent;
 }());
 ResearchComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         template: __webpack_require__("../../../../../src/app/research/research.component.html")
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object])
@@ -5905,7 +5917,7 @@ var ResourcesComponent = (function () {
     return ResourcesComponent;
 }());
 ResourcesComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         template: __webpack_require__("../../../../../src/app/resources/resources.component.html")
     })
 ], ResourcesComponent);
@@ -5956,7 +5968,7 @@ var TeachingComponent = (function () {
     return TeachingComponent;
 }());
 TeachingComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         template: __webpack_require__("../../../../../src/app/teaching/teaching.component.html")
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object])
@@ -5995,7 +6007,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //import { AppModuleNgFactory } from './app/app.module.ngFactory';
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
